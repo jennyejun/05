@@ -1,10 +1,12 @@
 #include <stdio.h>
 
 void main() {
-	int myNum;
-	printf("정수 하나를 입력하시오 : ");
-	scanf_s("%d", &myNum);
+	int n, i;
+	int sum = 0;
 
-	if (myNum >= 0) printf("절대값은 %d 입니다.", myNum);
-	else printf("절대값은 %d 입니다.", -myNum);
+	printf("input a number:");
+	scanf_s("%d", &n);
+
+	for (i = 1; i <= n; i++) sum = sum + i;
+	printf("The result is %d", sum);
 }
