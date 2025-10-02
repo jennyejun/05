@@ -1,16 +1,21 @@
 #include <stdio.h>
 
 void main() {
-	int a = 0, b = 0, c;
-	char calc;
+	int guess;
+	int answer = 59;
+	int trial = 1;
 
-	printf("input the calculation : ");
-	scanf_s("%d %c %d", &a, &calc, 1, &b);
+	printf("Guess a number :");
+	scanf_s("%d", &guess);
 
-	if (calc == '+') c = a + b;
-	else if (calc == '-') c = a - b;
-	else if (calc == '*') c = a * b;
-	else c = a / b;
+	while (guess != answer) {
+		if (guess < answer) printf("low!\n");
+		else if (guess > answer) printf("high!\n");
+		trial = trial + 1;
+		printf("Guess a number :");
+		scanf_s("%d", &guess);
+	}
 
-	printf("= %d", c);
+	printf("Congratulation! trials:%d", trial);
+
 }
